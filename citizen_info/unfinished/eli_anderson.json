@@ -1,8 +1,8 @@
 {
-  "id": "../citizen_id/williamstalton-buck.txt",
-  "first_name": "Williams",
-  "middle_name": "Everett",
-  "last_name": "Talton-Buck",
+  "id": "../citizen_id/elianderson.txt",
+  "first_name": "Eli",
+  "middle_name": "",
+  "last_name": "Anderson",
   "birthday": "",
   "nationality_status": "naturalization",
   "email": "",
@@ -13,7 +13,7 @@
   "secondary_address": "",
   "address_zip": "",
   "secondary_address_zip": "",
-  "job_1": "King",
+  "job_1": "United States Ambassador",
   "job_2": "",
   "job_3": "",
   "job_4": ""

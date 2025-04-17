@@ -73,10 +73,11 @@
 * **Williams Talton-Buck** – King
 * **Thelonious Price** – Executive Administrator (of Internal Affairs), Director of National Intelligence, Chief of Cybersecurity, and Minister of Information & Press
 * **Thomas Royden** – Administrator of Internal Affairs, Secretary of Defence, and Minister of Sports & Recreation
-* **Marshall Talton-Buck** – Prince, High Command of Military Affairs
+* **Marshall Talton-Buck** – Prince and High Command of Military Affairs
 * **James Mulford** – Secretary of the Treasury
 * **Chuck Rineheart** – Minister of Infrastructure & Development
 * **Teo Angotti-Gibbons** – Director of Animals and Wildlife
 * **Benais Hagelberger** – Mexican Ambassador
 * **Eli Anderson** – United States Ambassador
-* **Elizabeth Quinn** – Minister of Musical Arts
+* **Elizabeth Quinn** – King's Personal Secretary and Minister of Musical Arts
+* **Zane Loshen** – Prine's Personal Secretary

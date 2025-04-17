@@ -1,8 +1,8 @@
 {
-  "id": "../citizen_id/williamstalton-buck.txt",
-  "first_name": "Williams",
-  "middle_name": "Everett",
-  "last_name": "Talton-Buck",
+  "id": "../citizen_id/thomasroyden.txt",
+  "first_name": "Thomas",
+  "middle_name": "Miles",
+  "last_name": "Royden",
   "birthday": "",
   "nationality_status": "naturalization",
   "email": "",
@@ -13,8 +13,8 @@
   "secondary_address": "",
   "address_zip": "",
   "secondary_address_zip": "",
-  "job_1": "King",
-  "job_2": "",
-  "job_3": "",
+  "job_1": "Administrator of Internal Affairs",
+  "job_2": "Secretary of Defence",
+  "job_3": "Minister of Sports & Recreation",
   "job_4": ""
 }

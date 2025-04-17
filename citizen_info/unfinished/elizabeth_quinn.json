@@ -1,8 +1,8 @@
 {
-  "id": "../citizen_id/williamstalton-buck.txt",
-  "first_name": "Williams",
-  "middle_name": "Everett",
-  "last_name": "Talton-Buck",
+  "id": "../citizen_id/elizabethquinn.txt",
+  "first_name": "Elizabeth",
+  "middle_name": "",
+  "last_name": "Quinn",
   "birthday": "",
   "nationality_status": "naturalization",
   "email": "",
@@ -13,8 +13,8 @@
   "secondary_address": "",
   "address_zip": "",
   "secondary_address_zip": "",
-  "job_1": "King",
-  "job_2": "",
+  "job_1": "King's Personal Secretary",
+  "job_2": "Minister of Musical Arts",
   "job_3": "",
   "job_4": ""
 }

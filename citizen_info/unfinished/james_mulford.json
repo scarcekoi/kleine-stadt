@@ -1,8 +1,8 @@
 {
-  "id": "../citizen_id/williamstalton-buck.txt",
-  "first_name": "Williams",
-  "middle_name": "Everett",
-  "last_name": "Talton-Buck",
+  "id": "../citizen_id/jamesmulford.txt",
+  "first_name": "James",
+  "middle_name": "",
+  "last_name": "Mulford",
   "birthday": "",
   "nationality_status": "naturalization",
   "email": "",
@@ -13,7 +13,7 @@
   "secondary_address": "",
   "address_zip": "",
   "secondary_address_zip": "",
-  "job_1": "King",
+  "job_1": "Secretary of the Treasury",
   "job_2": "",
   "job_3": "",
   "job_4": ""
