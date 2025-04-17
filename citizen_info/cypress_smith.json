@@ -1,0 +1,16 @@
+{
+  "id": "../citizen_id/cypresssmith.txt",
+  "first_name": "Cypress",
+  "middle_name": "Rose",
+  "last_name": "Smith",
+  "birthday": "16/11/2011",
+  "nationality_status": "naturalization",
+  "email": "",
+  "contact_number": "4048629123",
+  "emergency_number": "7062249743",
+  "emergency_names": "Jostine Lyons",
+  "address": "1909 Silvastone Drive, Decatur, GA",
+  "secondary_address": "2003 Silvastone Drive, Atlanta, GA",
+  "address_zip": "30033",
+  "secondary_address_zip": "30345"
+}

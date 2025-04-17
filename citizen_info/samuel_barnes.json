@@ -1,0 +1,16 @@
+{
+  "id": "../citizen_id/samuelbarnes.txt",
+  "first_name": "Samuel",
+  "middle_name": "Noah Elliot",
+  "last_name": "Barnes",
+  "birthday": "09/08/2010",
+  "nationality_status": "naturalization",
+  "email": "sam.barnes?@gmail.com",
+  "contact_number": "7703099607",
+  "emergency_number": "7707149490",
+  "emergency_names": "Ava Barnes",
+  "address": "1197 McLendon Drive, Decatur, GA",
+  "secondary_address": "1243 Thomas Road, Decatur, GA",
+  "address_zip": "30033",
+  "secondary_address_zip": "30030"
+}
