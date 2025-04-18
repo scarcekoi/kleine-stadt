@@ -1,11 +1,11 @@
 {
   "id": "../citizen_id/samuelbarnes.txt",
-  "first_name": "Samuel",
+  "first_name": "Samuel (Sam)",
   "middle_name": "Noah Elliot",
   "last_name": "Barnes",
   "birthday": "09/08/2010",
   "nationality_status": "naturalization",
-  "email": "sam.barnes?@gmail.com",
+  "email": "sam.barnes.me@gmail.com",
   "contact_number": "7703099607",
   "emergency_number": "7707149490",
   "emergency_names": "Ava Barnes",
@@ -16,5 +16,6 @@
   "job_1": "",
   "job_2": "",
   "job_3": "",
-  "job_4": ""
+  "job_4": "",
+  "birth_place": "Sweden"
 }
