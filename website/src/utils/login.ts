@@ -6,17 +6,17 @@ type LoginResponse =
   | { success: true; token: string; max: number };
 
 export default async function login({
-  email,
+  username,
   password,
   maxAge,
   secret,
 }: {
-  email: string;
+  username: string;
   password: string;
   maxAge: number;
   secret: string;
 }): Promise<LoginResponse> {
-  const getLoginData = await dbLogin(email, password);
+  const getLoginData = await dbLogin(username, password);
   if (getLoginData.success === false) {
     return { success: false, token: null, max: null };
   }
@@ -24,7 +24,7 @@ export default async function login({
   const token = wbtl.sign(
     {
       exp: expire,
-      email: email,
+      email: username,
       username: getLoginData.username,
     },
     secret,
