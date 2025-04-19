@@ -1,8 +1,1 @@
-website/node_modules/
-website/dist/
-website/package-lock.json
-vpnpm-lock.yaml
-website/.env
-website/bun.lock
-website/.astro
 website/src/utils/routes.ts
