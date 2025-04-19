@@ -1,6 +1,6 @@
 export interface profileType {
   exp: number;
-  email: string | null;
   username: string | null;
+  user: string | null;
   iat: number;
 }

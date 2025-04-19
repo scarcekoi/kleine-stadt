@@ -1,2 +1,3 @@
 .vercel
 website/src/utils/routes.ts
+data/

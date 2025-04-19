@@ -2,31 +2,31 @@ import wblt from "jsonwebtoken";
 import type { profileType } from "./types";
 
 type HasProfileResponse =
-  | { success: false; email: null; username: null }
-  | { success: true; email: string; username: string };
+  | { success: false; username: null; user: null }
+  | { success: true; username: string; user: string };
 
 export default function hasProfile(
   myToken: string | undefined,
   secret: string,
 ): HasProfileResponse {
-  let email: string | null = null;
   let username: string | null = null;
+  let user: string | null = null;
   let success = false;
   if (!myToken || myToken === "undefined" || myToken === "null") {
-    return { success, email, username };
+    return { success, username, user };
   }
   try {
     const data = wblt.verify(myToken, secret) as profileType;
-    if (data.email && data.username) {
+    if (data.username && data.user) {
       success = true;
-      email = data.email;
       username = data.username;
+      user = data.user;
     }
   } catch {
     success = false;
   }
   if (!success) {
-    return { success, email: null, username: null };
+    return { success, username: null, user: null };
   }
-  return { success, email: email as string, username: username as string };
+  return { success, username: username as string, user: user as string };
 }
