@@ -13,8 +13,7 @@
     "@astrojs/vercel": "^8.1.2",
     "astro": "^5.5.3",
     "fs.promises": "^0.1.2",
-    "jsonwebtoken": "^9.0.2",
-    "path-to-regexp": "^8.0.0"
+    "jsonwebtoken": "^9.0.2"
   },
   "devDependencies": {
     "@types/jsonwebtoken": "^9.0.9",
