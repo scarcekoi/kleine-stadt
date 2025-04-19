@@ -3,7 +3,7 @@ import { Astro } from 'astro';
 import fs from 'fs/promises';
 import path from 'path';
 
-const searchName = Astro.request.url.searchParams.get("name")?.toLowerCase() ?? "";
+const searchName = Astro.url.searchParams.get("name")?.toLowerCase() ?? "";
 const infoDir = path.resolve("../../../data/citizen_info");
 const files = await fs.readdir(infoDir);
 let match = null;
