@@ -1,0 +1,31 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Button from "@/components/LogoutButton.astro";
+
+const profile = Astro.locals.profile;
+
+if (profile.success === false) {
+  return Astro.redirect("/login");
+}
+---
+
+<Layout page="Home">
+  <div class="container">
+    <div class="index">
+      <center>
+        <h1>Welcome, {profile.username}</h1>
+        <br />
+        <Button />
+      </center>
+      <div class="quote">
+        <center>
+          <span
+            >by <a href="https://zastinian.com">Zastinian</a>, <a
+              href="https://github.com/Zastinian/Astro-Login">Github Code</a
+            >, <a href="https://twitter.com/Zastinian">Twitter</a>.</span
+          >
+        </center>
+      </div>
+    </div>
+  </div>
+</Layout>
