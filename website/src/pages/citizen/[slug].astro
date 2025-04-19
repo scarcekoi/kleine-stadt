@@ -5,7 +5,13 @@ import path from 'path';
 
 const slug = Astro.params.slug;
 const jsonPath = path.resolve(`../../../data/citizen_info/${slug}.json`);
-const data = JSON.parse(await fs.readFile(jsonPath, "utf-8"));
+let data;
+
+try {
+  data = JSON.parse(await fs.readFile(jsonPath, "utf-8"));
+} catch (e) {
+  return Astro.redirect("/404");
+}
 
 const textIdPath = path.resolve(`../../../data${data.id}`);
 const idText = await fs.readFile(textIdPath, "utf-8");
@@ -15,11 +21,11 @@ const pdfs = [];
 for (const type of photoTypes) {
   const base = `../../../data/photos/${type}`;
   const front = `${data.first_name.toLowerCase()}-front.pdf`;
-  const last = `${data.first_name.toLowerCase()}-last.pdf`;
+  const back = `${data.first_name.toLowerCase()}-back.pdf`;
   const frontPath = path.join(base, front);
-  const lastPath = path.join(base, last);
+  const backPath = path.join(base, back);
   try { await fs.access(frontPath); pdfs.push({ type, file: `/data/photos/${type}/${front}` }); } catch {}
-  try { await fs.access(lastPath); pdfs.push({ type, file: `/data/photos/${type}/${last}` }); } catch {}
+  try { await fs.access(backPath); pdfs.push({ type, file: `/data/photos/${type}/${back}` }); } catch {}
 }
 ---
 <Layout page={`Citizen: ${data.first_name}`}>
