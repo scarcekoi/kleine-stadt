@@ -7,7 +7,7 @@ let maxAge = 604800;
 export const POST: APIRoute = async ({ cookies, redirect, request }) => {
   const data = Object.fromEntries(new URLSearchParams(await request.text()));
   const d = await loginSave({
-    username: data.username,
+    email: data.email,
     password: data.password,
     maxAge: Number(import.meta.env.MAX_AGE || 604800),
     secret: import.meta.env.COOKIE_SECRET || "secret",
