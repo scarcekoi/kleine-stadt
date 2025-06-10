@@ -1,4 +1,7 @@
 .vercel
 website/src/utils/routes.ts
 website/src/pages/index.astro
-data/
+data/citizens_id
+data/citizens_info
+data/citizens
+data/photos
