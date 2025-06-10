@@ -1,0 +1,12 @@
+---
+import Layout from "@/layouts/Layout.astro";
+---
+<Layout page="Citizen Search">
+  <div class="container">
+    <h1>Search Citizens</h1>
+    <form action="/citizen" method="get">
+      <input type="text" name="name" placeholder="Enter first, middle, or last name" required />
+      <button type="submit">Search</button>
+    </form>
+  </div>
+</Layout>

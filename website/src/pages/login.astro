@@ -1,0 +1,26 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import LoginForm from "@/components/LoginForm.astro";
+
+if (Astro.locals.profile.success === true) {
+  return Astro.redirect("/");
+}
+
+const error = new URL(Astro.request.url).searchParams.get("error");
+---
+
+<Layout page="Login">
+  <div class={`container ${error === "true" ? "error-active" : ""}`}>
+    {
+      error === "true" && (
+        <div class="error-message">
+          <p>Error: Could not login. Please verify your credentials.</p>
+        </div>
+      )
+    }
+    <div class="login">
+      <h1>Login</h1>
+      <LoginForm />
+    </div>
+  </div>
+</Layout>

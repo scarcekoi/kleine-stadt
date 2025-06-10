@@ -1,0 +1,59 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import fs from 'fs/promises';
+import path from 'path';
+
+const slug = Astro.params.slug;
+const jsonPath = path.resolve(`../../../data/citizen_info/${slug}.json`);
+let data;
+
+try {
+  data = JSON.parse(await fs.readFile(jsonPath, "utf-8"));
+} catch (e) {
+  return Astro.redirect("/404");
+}
+
+const textIdPath = path.resolve(`../../../data${data.id}`);
+const idText = await fs.readFile(textIdPath, "utf-8");
+
+const photoTypes = ["appeals", "cards", "removals", "requests"];
+const pdfs = [];
+for (const type of photoTypes) {
+  const base = `../../../data/photos/${type}`;
+  const front = `${data.first_name.toLowerCase()}-front.pdf`;
+  const back = `${data.first_name.toLowerCase()}-back.pdf`;
+  const frontPath = path.join(base, front);
+  const backPath = path.join(base, back);
+  try { await fs.access(frontPath); pdfs.push({ type, file: `/data/photos/${type}/${front}` }); } catch {}
+  try { await fs.access(backPath); pdfs.push({ type, file: `/data/photos/${type}/${back}` }); } catch {}
+}
+---
+<Layout page={`Citizen: ${data.first_name}`}>
+  <div class="container">
+    <h1>{data.first_name} {data.middle_name ? data.middle_name + ' ' : ''}{data.last_name}</h1>
+    <p><strong>ID Document:</strong></p>
+    <pre>{idText}</pre>
+
+    <h2>Details</h2>
+    <ul>
+      <li><strong>Birthday:</strong> {data.birthday}</li>
+      <li><strong>Status:</strong> {data.nationality_status}</li>
+      <li><strong>Contact:</strong> {data.contact_number}</li>
+      <li><strong>Emergency:</strong> {data.emergency_number} ({data.emergency_names})</li>
+      <li><strong>Address:</strong> {data.address} ({data.address_zip})</li>
+      {data.secondary_address && <li><strong>Secondary Address:</strong> {data.secondary_address} ({data.secondary_address_zip})</li>}
+      <li><strong>Birthplace:</strong> {data.birth_place}</li>
+    </ul>
+
+    {pdfs.length > 0 && (
+      <>
+        <h2>Documents</h2>
+        <ul>
+          {pdfs.map(doc => (
+            <li><a href={doc.file} target="_blank">{doc.type.toUpperCase()} - {doc.file.split("/").pop()}</a></li>
+          ))}
+        </ul>
+      </>
+    )}
+  </div>
+</Layout>

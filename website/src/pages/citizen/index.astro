@@ -1,0 +1,23 @@
+---
+import { Astro } from 'astro';
+import fs from 'fs/promises';
+import path from 'path';
+
+const searchName = Astro.url.searchParams.get("name")?.toLowerCase() ?? "";
+const infoDir = path.resolve("../../../data/citizen_info");
+const files = await fs.readdir(infoDir);
+let match = null;
+
+for (const file of files) {
+  const data = JSON.parse(await fs.readFile(path.join(infoDir, file), "utf-8"));
+  const values = [data.first_name, data.middle_name, data.last_name].map(v => v?.toLowerCase());
+  if (values.includes(searchName)) {
+    match = file.replace(".json", "").replace("_", "");
+    break;
+  }
+}
+
+if (!match) {
+  return Astro.redirect("/not-found");
+}
+return Astro.redirect(`/citizen/${match}`);
