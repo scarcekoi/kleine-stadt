@@ -1,0 +1,4 @@
+.vercel
+website/src/utils/routes.ts
+website/src/pages/index.astro
+data/
